@@ -1,0 +1,11 @@
+D:\Projects\SQLTester\SqlTester\SQLTester\bin\Debug\SQLTester.exe.config
+D:\Projects\SQLTester\SqlTester\SQLTester\bin\Debug\SQLTester.exe
+D:\Projects\SQLTester\SqlTester\SQLTester\bin\Debug\SQLTester.pdb
+D:\Projects\SQLTester\SqlTester\SQLTester\obj\Debug\SQLTester.csproj.AssemblyReference.cache
+D:\Projects\SQLTester\SqlTester\SQLTester\obj\Debug\SQLTester.csproj.SuggestedBindingRedirects.cache
+D:\Projects\SQLTester\SqlTester\SQLTester\obj\Debug\SQLTester.Properties.Resources.resources
+D:\Projects\SQLTester\SqlTester\SQLTester\obj\Debug\SQLTester.csproj.GenerateResource.cache
+D:\Projects\SQLTester\SqlTester\SQLTester\obj\Debug\SQLTester.csproj.CoreCompileInputs.cache
+D:\Projects\SQLTester\SqlTester\SQLTester\obj\Debug\SQLTester.exe
+D:\Projects\SQLTester\SqlTester\SQLTester\obj\Debug\SQLTester.pdb
+D:\Projects\SQLTester\SqlTester\SQLTester\obj\Debug\SQLTester.SqlTester.resources
