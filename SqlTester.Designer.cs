@@ -51,7 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.totalTimeLbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.resultsBtn = new System.Windows.Forms.Button();
             this.resultsTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.resolveLbl = new System.Windows.Forms.Label();
@@ -135,6 +135,7 @@
             this.baseFindBtn.TabIndex = 7;
             this.baseFindBtn.Text = "Find";
             this.baseFindBtn.UseVisualStyleBackColor = true;
+            this.baseFindBtn.Click += new System.EventHandler(this.baseFindBtn_Click);
             // 
             // prototypeFindBtn
             // 
@@ -144,6 +145,7 @@
             this.prototypeFindBtn.TabIndex = 8;
             this.prototypeFindBtn.Text = "Find";
             this.prototypeFindBtn.UseVisualStyleBackColor = true;
+            this.prototypeFindBtn.Click += new System.EventHandler(this.prototypeFindBtn_Click);
             // 
             // generateBtn
             // 
@@ -244,14 +246,15 @@
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 22;
             // 
-            // button1
+            // resultsBtn
             // 
-            this.button1.Location = new System.Drawing.Point(564, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = true;
+            this.resultsBtn.Location = new System.Drawing.Point(564, 212);
+            this.resultsBtn.Name = "resultsBtn";
+            this.resultsBtn.Size = new System.Drawing.Size(75, 23);
+            this.resultsBtn.TabIndex = 21;
+            this.resultsBtn.Text = "Find";
+            this.resultsBtn.UseVisualStyleBackColor = true;
+            this.resultsBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // resultsTxt
             // 
@@ -375,7 +378,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.resolveLbl);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.resultsBtn);
             this.Controls.Add(this.resultsTxt);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.totalTimeLbl);
@@ -429,7 +432,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label totalTimeLbl;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button resultsBtn;
         private System.Windows.Forms.TextBox resultsTxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label resolveLbl;

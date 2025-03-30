@@ -53,12 +53,14 @@ namespace SQLTester
             userNameTxt.Text = ConfigurationManager.AppSettings["UserName"];
             passwordTxt.Text = ConfigurationManager.AppSettings["Password"];
 
-    }
+         }
 
 
 
         private void executeButton_Click(object sender, EventArgs e)
         {
+            executeButton.Enabled = false;
+            executeButton.Text = "Executing Query";
             executionStopwatch.Start();
 
             string connectionString = $"Server={serverTxt.Text};Database={databaseTxt.Text};User Id={userNameTxt.Text};Password={passwordTxt.Text};";
@@ -142,6 +144,8 @@ namespace SQLTester
             executionStopwatch.Reset();
 
             resolveLbl.Text = resolveCompare();
+            executeButton.Enabled = true;
+            executeButton.Text = "Execute";
         }
 
         private String resolveCompare()
@@ -237,6 +241,49 @@ namespace SQLTester
             sb.Append(max);
 
             return sb.ToString();
+        }
+
+        private string searchFile()
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                openFileDialog.Filter = "SQL files (*.sql)|*.sql|All files (*.*)|*.*";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    return openFileDialog.FileName;
+                }
+            }
+            return "";
+        }
+
+        private string searchFolder()
+        {
+            using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+            {
+                if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+                {
+                    return folderBrowserDialog.SelectedPath;
+                }
+            }
+
+            return "";
+        }
+
+        private void baseFindBtn_Click(object sender, EventArgs e)
+        {
+            baseTxt.Text = searchFile();
+        }
+
+        private void prototypeFindBtn_Click(object sender, EventArgs e)
+        {
+            prototypeTxt.Text = searchFile();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            resultsTxt.Text = searchFolder();
         }
     }
 }
